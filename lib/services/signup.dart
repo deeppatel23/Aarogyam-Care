@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 // import 'package:Learn1/google_signin.dart';
-import 'HomePage.dart';
+import '../HomePage.dart';
 import 'email_login.dart';
 import 'email_signup.dart';
 import 'google_signin.dart';

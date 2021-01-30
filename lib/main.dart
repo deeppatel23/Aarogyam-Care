@@ -4,9 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 import 'HomePage.dart';
-import 'signup.dart';
-// import 'package:Learn1/homepage.dart';
-// import 'package:Learn1/signup.dart';
+import 'services/signup.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
