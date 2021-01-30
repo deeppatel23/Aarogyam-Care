@@ -1,7 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-
+import 'Symptoms/symptomsInput.dart';
 import 'services/email_login.dart';
+import 'package:dotslash/diseaseInfo/RemedyPage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -59,6 +60,15 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),*/
             ),
+            ListTile(
+              title: Text('Predict'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SymptomsInput()),
+                );
+              },
+            ),
           ],
         ),
       ),
@@ -66,13 +76,19 @@ class _HomePageState extends State<HomePage> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              Container(
-                color: Colors.amber,
+              Card(
+                child: InkWell(
+                    child: Text("Home Remedies"),
+                    onTap: () {
+                      Navigator.push(
+                        this.context,
+                        // ignore: missing_return
+                        MaterialPageRoute(
+                          builder: (context) => RemedyPage(),
+                        ),
+                      );
+                    }),
               ),
-              IconButton(
-                icon: Icon(Icons.map),
-                onPressed: () {},
-              )
             ]),
       ),
     );
