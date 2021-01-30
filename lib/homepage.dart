@@ -6,6 +6,7 @@ import 'package:dotslash/symptoms/symptomsInput.dart';
 import 'services/disease_predict_model.dart';
 import 'services/email_login.dart';
 import 'package:dotslash/diseaseInfo/RemedyPage.dart';
+import 'package:dotslash/displayEvents/showEvents.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -70,6 +71,15 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => SymptomsInput()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Events'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ShowEvents()),
                 );
               },
             ),
