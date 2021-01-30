@@ -1,10 +1,7 @@
-// import 'package:Learn1/email_signup.dart';
-// import 'package:Learn1/signup.dart';
-// import 'package:Learn1/email_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import 'email_login.dart';
+import 'services/email_login.dart';
 
 class HomePage extends StatefulWidget {
   @override
