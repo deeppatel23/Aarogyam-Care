@@ -29,7 +29,7 @@ class MyMap extends StatelessWidget {
                   onPressed: () => MapsLauncher.launchQuery('Nearby doctor'),
                   child: Text('Doctor near you'),
                 ),
-              ), /*
+              ),
               Container(
                 width: 250,
                 child: RaisedButton(
@@ -39,7 +39,7 @@ class MyMap extends StatelessWidget {
                       20.77, 73.05, 'Your Location'),
                   child: Text('LAUNCH COORDINATES'),
                 ),
-              ),*/
+              ),
             ],
           ),
         ),

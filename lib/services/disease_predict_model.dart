@@ -283,7 +283,7 @@ class _ML_ModelState extends State<ML_Model> {
       floatingActionButton: SpeedDial(
         animatedIcon: AnimatedIcons.menu_close,
         animatedIconTheme: IconThemeData(size: 22.0),
-        // child: Icon(Icons.add),
+        child: Icon(Icons.add),
         onOpen: () => print('OPENING DIAL'),
         onClose: () => print('DIAL CLOSED'),
         visible: true,
