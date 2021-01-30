@@ -1,6 +1,8 @@
+import 'package:dotslash/services/maplauncher.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:dotslash/symptoms/symptomsInput.dart';
+import 'services/disease_predict_model.dart';
 import 'services/email_login.dart';
 import 'package:dotslash/diseaseInfo/RemedyPage.dart';
 
@@ -90,6 +92,38 @@ class _HomePageState extends State<HomePage> {
                       );
                     }),
               ),
+              SizedBox(
+                height: 10,
+              ),
+              Card(
+                child: InkWell(
+                    child: Text("Skin Dieses Prediction"),
+                    onTap: () {
+                      Navigator.push(
+                        this.context,
+                        // ignore: missing_return
+                        MaterialPageRoute(
+                          builder: (context) => ML_Model(),
+                        ),
+                      );
+                    }),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              /*Card(
+                child: InkWell(
+                    child: Text("Doctor near me"),
+                    onTap: () {
+                      Navigator.push(
+                        this.context,
+                        // ignore: missing_return
+                        MaterialPageRoute(
+                          builder: (context) => MyMap(),
+                        ),
+                      );
+                    }),
+              ),*/
             ]),
       ),
     );
