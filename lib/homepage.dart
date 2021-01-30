@@ -7,7 +7,13 @@ import 'package:Learn1/email_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
+import 'Symptoms/symptomsInput.dart';
+import 'services/email_login.dart';
+import 'package:dotslash/diseaseInfo/RemedyPage.dart';
+
+
 import 'email_login.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -64,6 +70,15 @@ class _HomePageState extends State<HomePage> {
                   //image: NetworkImage("${user?.photoUrl}"),
                 ),
               ),*/
+            ),
+            ListTile(
+              title: Text('Predict'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => SymptomsInput()),
+                );
+              },
             ),
           ],
         ),
