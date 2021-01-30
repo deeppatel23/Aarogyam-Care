@@ -1,3 +1,4 @@
+import 'package:dotslash/services/chatbot.dart';
 import 'package:dotslash/services/maplauncher.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -111,7 +112,7 @@ class _HomePageState extends State<HomePage> {
               SizedBox(
                 height: 10,
               ),
-              /*Card(
+              Card(
                 child: InkWell(
                     child: Text("Doctor near me"),
                     onTap: () {
@@ -123,7 +124,23 @@ class _HomePageState extends State<HomePage> {
                         ),
                       );
                     }),
-              ),*/
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Card(
+                child: InkWell(
+                    child: Text("Chatbot"),
+                    onTap: () {
+                      Navigator.push(
+                        this.context,
+                        // ignore: missing_return
+                        MaterialPageRoute(
+                          builder: (context) => MyBot(),
+                        ),
+                      );
+                    }),
+              ),
             ]),
       ),
     );
