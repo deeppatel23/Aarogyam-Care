@@ -37,7 +37,7 @@ class _PredictDiseaseState extends State<PredictDisease> {
                 }
                 for (var key in priorityMap.keys) {
                   print(priorityMap[key]);
-                  if (priorityMap[key] > 0) {
+                  if (priorityMap[key] > 1) {
                     predictedDiseases.add(ListTile(
                         title: Text(
                           "$key",
@@ -52,15 +52,49 @@ class _PredictDiseaseState extends State<PredictDisease> {
                                 style: TextStyle(
                                     fontSize: 17.5,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xfff53920)),
+                                    color: Colors.redAccent),
                               )
                             : Text(
+                                "Medium Probability",
+                                style: TextStyle(
+                                    fontSize: 17.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.yellow),
+                              )));
+                  } else if (priorityMap[key] > 0) {
+                    predictedDiseases.add(ListTile(
+                        title: Text(
+                          "$key",
+                          style: TextStyle(
+                            fontSize: 20.5,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        subtitle: priorityMap[key] > 0
+                            ? Text(
                                 "Low Probability",
                                 style: TextStyle(
                                     fontSize: 17.5,
                                     fontWeight: FontWeight.w500,
-                                    color: Color(0xfff2da1f)),
+                                    color: Colors.lightBlue),
+                              )
+                            : Text(
+                                "No Disease Predicted",
+                                style: TextStyle(
+                                    fontSize: 17.5,
+                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black),
                               )));
+                  } else {
+                    predictedDiseases.add(ListTile(
+                      title: Text(
+                        "None",
+                        style: TextStyle(
+                            fontSize: 20.5,
+                            fontWeight: FontWeight.w500,
+                            color: Colors.black),
+                      ),
+                    ));
                   }
                 }
                 return Padding(
