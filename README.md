@@ -41,3 +41,4 @@ We have a list of ideas to implement in the future:
  </ul>
 
 <a href="https://docs.google.com/presentation/d/1Zjf3tXtAjQeR9oj2PVA_dREH3ZviiMQAqTdgRUCtakk/edit?usp=sharing">Presentation</a>
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/x3TBQeLAFzc/0.jpg)](https://www.youtube.com/watch?v=x3TBQeLAFzc)
