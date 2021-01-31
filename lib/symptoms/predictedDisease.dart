@@ -30,7 +30,7 @@ class _PredictDiseaseState extends State<PredictDisease> {
                   final diseaseData = disease.data();
                   priorityMap[disease.id] = 0;
                   for (var symptom in widget.symptoms) {
-                    if (diseaseData['symptom'].contains(symptom)) {
+                    if (diseaseData['symptoms'].contains(symptom)) {
                       priorityMap[disease.id]++;
                     }
                   }

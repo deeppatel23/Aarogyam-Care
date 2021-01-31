@@ -30,7 +30,7 @@ class MyMap extends StatelessWidget {
                   child: Text('Doctor near you'),
                 ),
               ),
-              Container(
+              /*Container(
                 width: 250,
                 child: RaisedButton(
                   color: Color.fromRGBO(14, 49, 80, 1),
@@ -39,7 +39,7 @@ class MyMap extends StatelessWidget {
                       20.77, 73.05, 'Your Location'),
                   child: Text('LAUNCH COORDINATES'),
                 ),
-              ),
+              ),*/
             ],
           ),
         ),
