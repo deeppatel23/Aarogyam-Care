@@ -1,5 +1,6 @@
 import 'package:dotslash/services/chatbot.dart';
 import 'package:dotslash/services/maplauncher.dart';
+import 'package:dotslash/services/ourteam.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:dotslash/symptoms/symptomsInput.dart';
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Aarogyaam Cure"),
+        title: Text("Aarogyam Cure"),
         centerTitle: true,
         actions: [
           IconButton(
@@ -55,9 +56,23 @@ class _HomePageState extends State<HomePage> {
         elevation: 10.0,
         child: ListView(
           children: <Widget>[
-            UserAccountsDrawerHeader(
-              accountName: Text("${user?.displayName}"),
-              accountEmail: Text("${user?.email}"),
+            DrawerHeader(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Container(
+                      child: Image.asset(
+                    "assets/logo.png",
+                    width: 137,
+                    height: 137,
+                  ))
+                ],
+              ),
+              decoration: BoxDecoration(
+                color: Color.fromRGBO(14, 49, 80, 1),
+              ),
+              // accountName: Text("${user?.displayName}"),
+              // accountEmail: Text("${user?.email}"),
               /*decoration: BoxDecoration(
                 image: DecorationImage(
                   fit: BoxFit.fill,
@@ -66,7 +81,7 @@ class _HomePageState extends State<HomePage> {
               ),*/
             ),
             ListTile(
-              title: Text('Predict'),
+              title: Text('Symptoms Check'),
               onTap: () {
                 Navigator.push(
                   context,
@@ -80,6 +95,42 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => ShowEvents()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('doctor near me'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyMap()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('chat with doctor'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => MyBot()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Home remedies'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RemedyPage()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('About us'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => OurTeam()),
                 );
               },
             ),

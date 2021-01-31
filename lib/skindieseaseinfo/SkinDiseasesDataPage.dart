@@ -174,6 +174,7 @@ class DiseasesList extends StatefulWidget {
 }
 
 class _DiseasesListState extends State<DiseasesList> {
+  // ignore: non_constant_identifier_names
   row_of_two_diseses_list(String _disesesName, int _index) {
     var _cardColor;
     if (_index % 3 == 0) {
