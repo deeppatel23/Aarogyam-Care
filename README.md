@@ -40,7 +40,7 @@ We have a list of ideas to implement in the future:
 <li>Using Ar to teach precautions, first-aid and initial stage treatment</li>
  </ul>
 
-## Technologies USed
+## Technologies Used
 <ul>
  <li>Flutter</li>
  <li>Firebase</li>
