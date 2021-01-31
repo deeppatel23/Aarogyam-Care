@@ -1,3 +1,4 @@
+import 'package:dotslash/echoAR.dart';
 import 'package:dotslash/services/chatbot.dart';
 import 'package:dotslash/services/maplauncher.dart';
 import 'package:dotslash/services/ourteam.dart';
@@ -310,6 +311,28 @@ class _HomePageState extends State<HomePage> {
                         // ignore: missing_return
                         MaterialPageRoute(
                           builder: (context) => MyMap(),
+                        ),
+                      );
+                    }),
+              ),
+            ),
+          ),
+          Padding(
+            padding:
+                const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20.0),
+            child: Container(
+              color: Colors.blue[100],
+              padding: EdgeInsets.symmetric(vertical: 30.0, horizontal: 30.0),
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: InkWell(
+                    child: Text("Learn with AR"),
+                    onTap: () {
+                      Navigator.push(
+                        this.context,
+                        // ignore: missing_return
+                        MaterialPageRoute(
+                          builder: (context) => echoAR(),
                         ),
                       );
                     }),
