@@ -40,6 +40,15 @@ We have a list of ideas to implement in the future:
 <li>Using Ar to teach precautions, first-aid and initial stage treatment</li>
  </ul>
 
+##Technologies USed
+<ul>
+ <li>Flutter</li>
+ <li>Firebase</li>
+ <li>EchoAr</li>
+ <li>Teachable Machine by Google</li>
+ <li>Dialogflow</li>
+</ul>
+
 <a href="https://docs.google.com/presentation/d/1Zjf3tXtAjQeR9oj2PVA_dREH3ZviiMQAqTdgRUCtakk/edit?usp=sharing">Presentation</a>
 <br>
 [![Video Submission](https://img.youtube.com/vi/x3TBQeLAFzc/0.jpg)](https://www.youtube.com/watch?v=x3TBQeLAFzc)
