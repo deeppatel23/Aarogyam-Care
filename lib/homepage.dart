@@ -8,6 +8,8 @@ import 'services/disease_predict_model.dart';
 import 'services/email_login.dart';
 import 'package:dotslash/diseaseInfo/RemedyPage.dart';
 import 'package:dotslash/displayEvents/showEvents.dart';
+import 'package:dotslash/remedies/remediesDb.dart';
+import 'package:dotslash/remedies/showRemedies.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,7 +18,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final FirebaseAuth _auth = FirebaseAuth.instance;
-  User user;
+  //User user1;
+  //String accountEmail = "${user.email}";
 
   @override
   void initState() {
@@ -121,7 +124,16 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => RemedyPage()),
+                  MaterialPageRoute(builder: (context) => ShowRemedies()),
+                );
+              },
+            ),
+            ListTile(
+              title: Text('Add own remedies'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => remedies()),
                 );
               },
             ),
@@ -149,7 +161,7 @@ class _HomePageState extends State<HomePage> {
                         this.context,
                         // ignore: missing_return
                         MaterialPageRoute(
-                          builder: (context) => RemedyPage(),
+                          builder: (context) => ShowRemedies(),
                         ),
                       );
                     }),
