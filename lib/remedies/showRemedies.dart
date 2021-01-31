@@ -33,17 +33,15 @@ class VideoScreenState extends State<ShowRemedies> {
               scrollDirection: Axis.vertical,
               children: snapshot.data.docs.map((document) {
                 return Container(
-                  padding: EdgeInsets.all(8),
+                  // padding: EdgeInsets.all(8),
                   color: Colors.white54,
                   child: Column(
                     children: <Widget>[
                       Container(
-                          padding: EdgeInsets.all(8),
-                          // padding: EdgeInsets.only(
-                          //     left: 10, right: 5, top: 5, bottom: 5),
-                          // decoration: BoxDecoration(boxShadow: []),
+                          // padding: EdgeInsets.all(8),
+                          width: MediaQuery.of(context).size.width - 20,
                           child: Card(
-                            color: Color.fromRGBO(152, 251, 152, 0.5),
+                            color: Colors.deepOrange[100],
 
                             //   elevation: 0,
                             //   shape: RoundedRectangleBorder(
@@ -58,17 +56,33 @@ class VideoScreenState extends State<ShowRemedies> {
                                 children: [
                                   Text(
                                     "Name: " + document['title'].toString(),
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 25,
+                                        fontWeight: FontWeight.w500),
+                                  ),
+                                  SizedBox(
+                                    height: 4,
                                   ),
                                   Text(
                                     "Plant: " +
                                         document['ingredients'].toString(),
-                                    style: TextStyle(fontSize: 20),
+                                    style: TextStyle(
+                                        fontSize: 19,
+                                        fontWeight: FontWeight.w400),
                                   ),
-                                  Text(
-                                    "Description: " +
-                                        document['description'].toString(),
-                                    style: TextStyle(fontSize: 20),
+                                  SizedBox(
+                                    height: 8,
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Description: " +
+                                          document['description'].toString(),
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                      ),
+                                    ),
                                   ),
                                 ],
                               ),
