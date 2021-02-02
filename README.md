@@ -7,7 +7,6 @@ I had my childhood in a village and that makes me feel the problems faced by the
 <li>Lack of information about Government Schemes</li>
 <li>Less awareness on health camps</li>
 <li>No platform to share remedial ideas</li> 
- <l1>Ar based model for first stage treatment</li>
 </ul>
 
 
@@ -18,6 +17,7 @@ Focussing on the problems, we designed the following solution:
 <li>Government Schemes and Health Camp Notification</li>
 <li>Healthcare Bot to answer FAQs</li>
 <li>Platform to share home remedies</li>
+<li>Ar based model for first stage treatment</li>
   </ul>
 
 ## How we built it
