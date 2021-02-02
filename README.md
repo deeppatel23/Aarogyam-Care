@@ -7,6 +7,7 @@ I had my childhood in a village and that makes me feel the problems faced by the
 <li>Lack of information about Government Schemes</li>
 <li>Less awareness on health camps</li>
 <li>No platform to share remedial ideas</li> 
+ <l1>Ar based model for first stage treatment</li>
 </ul>
 
 
